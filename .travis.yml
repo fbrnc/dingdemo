@@ -1,4 +1,8 @@
 before_script: curl -s http://dingdemo.ngrok.io/building
-after_success: curl -s http://dingdemo.ngrok.io/success
-after_failure: curl -s http://dingdemo.ngrok.io/failure
 script: sleep 10
+after_success: 
+  - curl -s http://dingdemo.ngrok.io/ding
+  - curl -s http://dingdemo.ngrok.io/success
+after_failure: 
+  - curl -s http://dingdemo.ngrok.io/ding
+  - curl -s http://dingdemo.ngrok.io/failure
