@@ -1,0 +1,4 @@
+before_script: curl -s http://dingdemo.ngrok.io/building
+after_success: curl -s http://dingdemo.ngrok.io/building
+after_failure: curl -s http://dingdemo.ngrok.io/building
+script: sleep 10
